@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, Image, StyleSheet, Button } from "react-native";
+import Icon from "react-native-vector-icons/FontAwesome6";
 
 function Header() {
   return (
@@ -10,18 +11,22 @@ function Header() {
         resizeMode="contain"
       />
       <View style={styles.content}>
-        <Text style={styles.text}>BudgetApp</Text>
+        <View style={styles.headerTextContainer}>
+          <Text style={styles.text}>Budget App </Text>
+          <Icon name="circle-dollar-to-slot" size={30} color="#fff" />
+        </View>
         <Text style={styles.description}>
           Check currency and gold rates, compare currencies, buy and sell.
           Manage your household budget
         </Text>
+
         <View style={styles.buttonContainer}>
           <Button
-            title="Start"
+            title="Get started"
             onPress={() => {
               // Handle button press
             }}
-            color="#BCECEE" // Customize button color
+            color="#7ED7C1" // Customize button color
           />
         </View>
       </View>
@@ -53,11 +58,16 @@ const styles = StyleSheet.create({
     flex: 1, // Adjust as needed
     width: "100%",
   },
+  headerTextContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginBottom: 10,
+  },
   text: {
     fontSize: 32,
     marginBottom: 30,
     color: "#fff",
-    fontWeight:'700' // Adjust as needed
+    fontWeight: "700", // Adjust as needed
   },
   description: {
     fontSize: 20,
@@ -66,7 +76,7 @@ const styles = StyleSheet.create({
     maxWidth: 400,
   },
   buttonContainer: {
-    maxWidth: 100,
+    maxWidth: '100%',
     marginTop: 50,
     width: 200,
   },
