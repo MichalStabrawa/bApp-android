@@ -8,15 +8,13 @@ export default function App() {
       <View>
         <Header />
       </View>
-      <View>
-        <Text>BudgetApp</Text>
-      </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
+    
     // Corrected from containera
     flex: 1,
     backgroundColor: "#fff",
