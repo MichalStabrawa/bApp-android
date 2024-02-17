@@ -26,7 +26,7 @@ function Header() {
             onPress={() => {
               // Handle button press
             }}
-            color="#BCECEE" // Customize button color
+            color="#7ED7C1" // Customize button color
           />
         </View>
       </View>
